@@ -1,4 +1,5 @@
 import { TextStyle } from "react-native";
+import * as Colors from "./colors";
 
 // Maps each weight variant of Figtree to its Expo Google Font name for easy access.
 type PrimaryFontFamily =
@@ -160,31 +161,31 @@ export const subheader: Record<Subheader, TextStyle> = {
 type Body = "x10" | "x20" | "x30" | "x40" | "x50";
 export const body: Record<Body, TextStyle> = {
   x10: {
-    // color: Colors.neutral.s800,
+    color: Colors.neutral.s800,
     ...fontFamily.figtree_regular,
     ...fontSize.x10,
     ...lineHeight.x10,
   },
   x20: {
-    // color: Colors.neutral.s800,
+    color: Colors.neutral.s800,
     ...fontFamily.figtree_regular,
     ...fontSize.x20,
     ...lineHeight.x20,
   },
   x30: {
-    // color: Colors.neutral.s800,
+    color: Colors.neutral.s800,
     ...fontFamily.figtree_regular,
     ...fontSize.x30,
     ...lineHeight.x30,
   },
   x40: {
-    // color: Colors.neutral.s800,
+    color: Colors.neutral.s800,
     ...fontFamily.figtree_regular,
     ...fontSize.x40,
     ...lineHeight.x40,
   },
   x50: {
-    // color: Colors.neutral.s800,
+    color: Colors.neutral.s800,
     ...fontFamily.figtree_regular,
     ...fontSize.x50,
     ...lineHeight.x50,
