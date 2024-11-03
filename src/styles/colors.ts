@@ -67,4 +67,42 @@ export const information: Record<Information, string> = {
   s400: "#2d8eff",
 };
 
-// TODO - Utils for opacity, tints and shades and for converting hex values.
+export const applyOpacity = (hexColor: string, opacity: number): string => {
+  const red = parseInt(hexColor.slice(1, 3), 16);
+  const green = parseInt(hexColor.slice(3, 5), 16);
+  const blue = parseInt(hexColor.slice(5, 7), 16);
+
+  return `rgba(${red}, ${green}, ${blue}, ${opacity})`;
+};
+
+type Transparent = "clear" | "lightGray" | "darkGray";
+export const transparent: Record<Transparent, string> = {
+  clear: "rgba(255, 255, 255, 0)",
+  lightGray: applyOpacity(neutral.s300, 0.4),
+  darkGray: applyOpacity(neutral.s800, 0.8),
+};
+
+export const shadeColor = (hexColor: string, percent: number): string => {
+  const redGamut: number = parseInt(hexColor.slice(1, 3), 16);
+  const greenGamut: number = parseInt(hexColor.slice(3, 5), 16);
+  const blueGamut: number = parseInt(hexColor.slice(5, 7), 16);
+
+  const rgb: number[] = [redGamut, greenGamut, blueGamut];
+
+  const toShadedGamut = (gamut: number): number => {
+    return Math.floor(Math.min(gamut * (1 + percent / 100), 255));
+  };
+
+  const toHex = (gamut: number): string => {
+    return gamut.toString(16).length === 1
+      ? `0${gamut.toString(16)}`
+      : gamut.toString();
+  };
+
+  const shadedRGB: number[] = rgb.map(toShadedGamut);
+  const shadedHex: string[] = shadedRGB.map(toHex);
+
+  const hexString: string = shadedHex.join("");
+
+  return `#${hexString}`;
+};
