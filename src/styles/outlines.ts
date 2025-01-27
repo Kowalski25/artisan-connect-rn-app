@@ -17,9 +17,17 @@ export const borderWidth: Record<BorderWidth, number> = {
   thick: 3,
 };
 
+// TODO - Modify and add more shadows based on the final design.
 type Shadow = "base";
 export const shadow: Record<Shadow, ViewStyle> = {
   base: {
     shadowColor: Colors.neutral.s400,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
 };
