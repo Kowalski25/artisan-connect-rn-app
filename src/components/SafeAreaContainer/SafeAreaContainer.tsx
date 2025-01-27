@@ -1,14 +1,9 @@
-import React, { FC, memo, ReactNode } from "react";
+import React, { memo } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleProp, ViewStyle } from "react-native";
 import styles from "./SafeAreaContainer.styles";
+import { ISafeAreaContainerProps } from "./SafeAreaContainer.types";
 
-interface Props {
-  children: ReactNode;
-  customStyles?: StyleProp<ViewStyle>;
-}
-
-export const SafeAreaContainer: FC<Props> = memo(
+export const SafeAreaContainer = memo<ISafeAreaContainerProps>(
   ({ children, customStyles }) => {
     return (
       <SafeAreaView style={[styles.container, customStyles]}>
