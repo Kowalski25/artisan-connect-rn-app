@@ -1,3 +1,5 @@
+import { NavigatorScreenParams } from "@react-navigation/native";
+
 /**
  * Learn more about using TypeScript with React Navigation:
  * https://reactnavigation.org/docs/typescript/
@@ -7,5 +9,7 @@
  */
 
 export type RootParamList = {
-  Home: undefined;
+  HomeScreen: undefined;
+  CartScreen: undefined;
+  AboutScreen: undefined;
 };
