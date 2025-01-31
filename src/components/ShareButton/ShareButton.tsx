@@ -1,12 +1,15 @@
+import React, { memo } from "react";
 import { View, Text } from "react-native";
-import React from "react";
+import * as Sharing from "expo-sharing";
 
-const ShareButton = () => {
+const ShareButton = memo(() => {
   return (
     <View>
-      <Text>ShareButton</Text>
+      <Text>Share Button</Text>
     </View>
   );
-};
+});
+
+ShareButton.displayName = "ShareButton";
 
 export default ShareButton;
