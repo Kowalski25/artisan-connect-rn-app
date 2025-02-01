@@ -1,1 +1,6 @@
-export interface IBackToTopButtonProps {}
+import { RefObject } from "react";
+import { ScrollView } from "react-native";
+
+export interface IBackToTopButtonProps {
+  scrollViewRef: RefObject<ScrollView>;
+}
