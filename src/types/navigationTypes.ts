@@ -12,4 +12,11 @@ export type RootParamList = {
   HomeScreen: undefined;
   CartScreen: undefined;
   AboutScreen: undefined;
+  SettingsScreen: undefined;
+  FAQScreen: undefined;
+  PoliciesScreen: undefined;
+  VouchersScreen: undefined;
+  CategoriesScreen: undefined;
+  ProductSearchScreen: undefined;
+  MyOrdersScreen: undefined;
 };
