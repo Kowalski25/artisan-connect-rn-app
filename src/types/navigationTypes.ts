@@ -8,7 +8,7 @@ import { NavigatorScreenParams } from "@react-navigation/native";
  * A union type with undefined (e.g. SomeType | undefined) means that params are optional.
  */
 
-export type RootParamList = {
+export type RootStackParamList = {
   HomeScreen: undefined;
   CartScreen: undefined;
   AboutScreen: undefined;
