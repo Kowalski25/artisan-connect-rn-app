@@ -16,6 +16,18 @@
           "microphonePermission": "Allow Artisan Connect to access your microphone",
           "recordAudioAndroid": true
         }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Artisan Connect to use Face ID?"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Artisan Connect to access your photos?"
+        }
       ]
     ],
     "splash": {
