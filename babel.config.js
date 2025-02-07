@@ -12,6 +12,8 @@ module.exports = function (api) {
           },
         },
       ],
+      // This plugin should always be listed last.
+      "react-native-reanimated/plugin",
     ],
   };
 };
