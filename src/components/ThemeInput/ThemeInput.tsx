@@ -1,10 +1,12 @@
-import { View, Text } from "react-native";
+import { View, Text, TextInput } from "react-native";
 import React, { memo } from "react";
+import { IThemeInputProps } from "./ThemeInput.types";
 
-const ThemeInput = memo(() => {
+const ThemeInput = memo<IThemeInputProps>(({ label, placeholder }) => {
   return (
     <View>
-      <Text>ThemeInput</Text>
+      <Text>{label}</Text>
+      <TextInput placeholder={placeholder} />
     </View>
   );
 });
