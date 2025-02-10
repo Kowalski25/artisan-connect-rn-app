@@ -9,14 +9,29 @@ import { NavigatorScreenParams } from "@react-navigation/native";
  */
 
 export type RootStackParamList = {
-  HomeScreen: undefined;
-  CartScreen: undefined;
-  AboutScreen: undefined;
-  SettingsScreen: undefined;
-  FAQScreen: undefined;
-  PoliciesScreen: undefined;
-  VouchersScreen: undefined;
-  CategoriesScreen: undefined;
-  ProductSearchScreen: undefined;
-  MyOrdersScreen: undefined;
+  Root: NavigatorScreenParams<RootBottomTabsParamList> | undefined;
+  // Auth
+  SignInScreen: undefined;
+  SignUpScreen: undefined;
+  ResetPasswordScreen: undefined;
+  EmailVerificationScreen: undefined;
+
+  About: undefined;
+  FAQ: undefined;
+  Feedback: undefined;
+  Policies: undefined;
+  Vouchers: undefined;
+  ProductSearch: undefined;
+  MyOrders: undefined;
+  RecentlyViewed: undefined;
+  ShareProduct: undefined;
+  TermsOfUse: undefined;
+};
+
+export type RootBottomTabsParamList = {
+  Home: undefined;
+  Categories: undefined;
+  Cart: undefined;
+  Messages: undefined;
+  Settings: undefined;
 };
