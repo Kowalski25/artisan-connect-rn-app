@@ -13,6 +13,7 @@ import {
   Figtree_800ExtraBold,
   Figtree_900Black,
 } from "@expo-google-fonts/figtree";
+import { Navigation } from "@app/navigation";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -40,6 +41,7 @@ export const App = () => {
   return (
     <GestureHandlerRootView>
       <SafeAreaProvider>
+        <Navigation />
         <StatusBar style="auto" />
       </SafeAreaProvider>
     </GestureHandlerRootView>

@@ -1,4 +1,9 @@
-import { NavigatorScreenParams } from "@react-navigation/native";
+import {
+  CompositeScreenProps,
+  NavigatorScreenParams,
+} from "@react-navigation/native";
+import { StackScreenProps } from "@react-navigation/stack";
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 
 /**
  * Learn more about using TypeScript with React Navigation:
@@ -28,6 +33,9 @@ export type RootStackParamList = {
   TermsOfUse: undefined;
 };
 
+export type RootStackScreenProp<Screen extends keyof RootStackParamList> =
+  StackScreenProps<RootStackParamList, Screen>;
+
 export type RootBottomTabsParamList = {
   Home: undefined;
   Categories: undefined;
@@ -35,3 +43,9 @@ export type RootBottomTabsParamList = {
   Messages: undefined;
   Settings: undefined;
 };
+
+export type IRootTabScreenProps<Screen extends keyof RootBottomTabsParamList> =
+  CompositeScreenProps<
+    BottomTabScreenProps<RootBottomTabsParamList, Screen>,
+    StackScreenProps<RootStackParamList>
+  >;
