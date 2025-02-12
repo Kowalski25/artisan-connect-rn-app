@@ -7,6 +7,7 @@ export const screen: Record<Screen, number> = {
   width: screenWidth,
 };
 
+// 4/8 Rule
 type Layout =
   | "x1"
   | "x2"
@@ -36,19 +37,19 @@ export const layout: Record<Layout, number> = {
   x7: 7,
   x10: 10,
   x15: 14,
-  x20: 18,
-  x30: 26,
-  x40: 34,
-  x50: 42,
-  x60: 50,
-  x70: 64,
-  x80: 86,
-  x90: 120,
-  x100: 130,
-  x110: 150,
-  x120: 170,
-  x130: 200,
-  x140: 230,
+  x20: 16,
+  x30: 24,
+  x40: 32,
+  x50: 40,
+  x60: 48,
+  x70: 56,
+  x80: 64,
+  x90: 96,
+  x100: 112,
+  x110: 128,
+  x120: 144,
+  x130: 160,
+  x140: 176,
 };
 
 export const x1 = layout.x1;

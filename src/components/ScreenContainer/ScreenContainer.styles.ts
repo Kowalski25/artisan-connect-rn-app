@@ -1,8 +1,10 @@
 import { StyleSheet } from "react-native";
+import { Sizing } from "@app/styles";
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 1,
+    flex: 1,
+    padding: Sizing.layout.x20,
   },
 });
 
